@@ -173,14 +173,15 @@ export const pageTitle = "Assignment 01";
     display:flex;
     justify-content: space-between;
     align-items: baseline;
-    width: calc(100%-100px);
+    width: calc(100vw-100px);
     margin: 20px 100px;
     gap: 50px;
     
   }
 .nav-branding {
     font-size: 20px;
-font-family: 'Bree Serif', serif;    
+    font-family: 'Bree Serif', serif;  
+    font-weight: 200;
   } 
 .nav-items a {
   background-color: #174A28;
@@ -214,5 +215,28 @@ font-family: 'Bree Serif', serif;
   .hero-text-block h1 {
     margin-top: 0;
   }
+.section-activity {
+  display: flex;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 50px 20px;
+  gap: 0px;
+}
+
+.section-activity img.section-image {
+  display:flex;
+  max-width: 700px;
+  max-height: 500px;
+  object-fit: cover;
+}
+.section-reverse {
+  flex-flow: row-reverse;
+  padding-left: -20px;
+}
+.section-text-panel {
+  background: #F2F2F0;
+  padding: 32px;
+}
 
 </style>
