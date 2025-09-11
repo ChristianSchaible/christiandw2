@@ -167,7 +167,10 @@ export const pageTitle = "Assignment 01";
   @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
   *{
  box-sizing: border-box;  
- color: black  
+ color: black;
+ font-family: 'Inter', sans-serif;
+
+
   }
   body, html {
     margin: 0;
@@ -248,6 +251,9 @@ export const pageTitle = "Assignment 01";
   justify-content:center;
   flex-direction: column;
 }
+.section-text-panel h2, .section-hero h1 {
+   font-family: 'Bree Serif', serif;  
+}
 .btn-cta {
   display: flex;
   border: 2px solid #3A6EA5;
@@ -277,6 +283,8 @@ export const pageTitle = "Assignment 01";
   margin:0;
   margin-bottom: 64px;
   max-width:1200px;
+  align-self: center;
+
 }
 .places-tile {   
   display: flex;
@@ -301,4 +309,6 @@ export const pageTitle = "Assignment 01";
     margin: 0;
   }
 
+
+.page-container{display: flex;flex-direction: column;}
 </style>
