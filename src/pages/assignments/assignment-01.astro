@@ -165,20 +165,23 @@ export const pageTitle = "Assignment 01";
 <style>
   /* importing fonts */
   @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-  .nav-branding {
-    font-size: 20px;
+  *{
+ box-sizing: border-box;    
   }
-  
+ 
   nav{
     display:flex;
     justify-content: space-between;
-    width: 1200PX;
+    align-items: baseline;
+    width: calc(100%-100px);
+    margin: 20px 100px;
+    gap: 50px;
     
   }
-  .nav-branding {
-    justify-content: CENTER;
-    align-items: center;
-  }
+.nav-branding {
+    font-size: 20px;
+font-family: 'Bree Serif', serif;    
+  } 
 .nav-items a {
   background-color: #174A28;
   color: #FFD1A8;
