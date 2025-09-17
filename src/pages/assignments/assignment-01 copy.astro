@@ -38,7 +38,12 @@ export const pageTitle = "Assignment 01 - Responsive";
         class="hero-image"
       />
     </section>
-      <section class="section-activity" id="hike">
+      <section class="section-activity" id="hike"> 
+      <Image
+          src={imgHike}
+          alt="Person sitting on the edge of a cliff at Joppenburg Mountain in Rosendale"
+          class="section-image"
+        />
         <div class="section-text-panel">
           <h2>Hike</h2>
           <p>
@@ -48,13 +53,14 @@ export const pageTitle = "Assignment 01 - Responsive";
           </p>
           <a href="" class="btn-cta">Explore Hikes</a>
         </div>
-        <Image
-          src={imgHike}
-          alt="Person sitting on the edge of a cliff at Joppenburg Mountain in Rosendale"
-          class="section-image"
-        />
+       
       </section>
       <section class="section-activity section-reverse" id="paddle">
+      <Image
+          src={imgPaddle}
+          alt="Person paddling in the Sawkill River near Kingston"
+          class="section-image"
+        />
         <div class="section-text-panel">
           <h2>Paddle</h2>
           <p>
@@ -64,13 +70,15 @@ export const pageTitle = "Assignment 01 - Responsive";
           </p>
           <a href="" class="btn-cta">Explore Paddling</a>
         </div>
-        <Image
-          src={imgPaddle}
-          alt="Person paddling in the Sawkill River near Kingston"
-          class="section-image"
-        />
+        
+    
       </section>
       <section class="section-activity" id="bike">
+      <Image
+          src={imgBike}
+          alt="Bike on the side of a carriage road at Mohonk Preserve"
+          class="section-image"
+        />
         <div class="section-text-panel">
           <h2>Bike</h2>
           <p>
@@ -80,11 +88,7 @@ export const pageTitle = "Assignment 01 - Responsive";
           </p>
           <a href="" class="btn-cta">Explore Cycling</a>
         </div>
-        <Image
-          src={imgBike}
-          alt="Bike on the side of a carriage road at Mohonk Preserve"
-          class="section-image"
-        />
+        
       </section>
       <section class="explore">
         <p class="big-text">
@@ -182,7 +186,7 @@ export const pageTitle = "Assignment 01 - Responsive";
     padding: 20px;
     align-items: center;
     justify-content: center;
-    width: 100vh;
+    width: 100vw;
   }
 .nav-branding {
     font-size: 35px;
@@ -198,8 +202,7 @@ export const pageTitle = "Assignment 01 - Responsive";
   text-decoration: none;
 }
   .section-hero {
-    width: 100vh;
-    position: relative;
+    width: 100vw;
     display: flex;
     flex-direction:column-reverse;
 
@@ -210,7 +213,6 @@ export const pageTitle = "Assignment 01 - Responsive";
 
   }
   .hero-text-block{
-    position: relative;
     padding: 32px;
     margin: 20px;
   }
@@ -219,22 +221,12 @@ export const pageTitle = "Assignment 01 - Responsive";
   }
 .section-activity {
   display: flex;
-  align-items: stretch;
-  max-width: 1200px;
-  margin: 0px auto;
-  padding: 0px;
-  gap: 0px;     
-  min-height: 500px; 
+  flex-direction: column;
+  width: 100vw;
 }
 .section-activity img.section-image {
   display:flex;
-  max-width: 700px;
-  max-height: 500px;
   object-fit: cover;
-}
-.section-reverse {
-  flex-direction: row-reverse;
-  padding-left: -20px;
 }
 .section-text-panel {
   background: #F2F2F0;
@@ -258,10 +250,9 @@ export const pageTitle = "Assignment 01 - Responsive";
   text-decoration: none;
 }
 .big-text {
-  font-size: 36px;
+  font-size: 1.5rem;
   text-align: center;
-  max-width: 760px;
-  margin: 0px auto;
+  max-width: 100vw;
   padding: 50px 20px;
   font-style: italic;
   letter-spacing: -2%; 
@@ -344,6 +335,34 @@ export const pageTitle = "Assignment 01 - Responsive";
   .hero-text-block h1 {
     margin-top: 0;
   }
+  .section-activity {
+  display: flex;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px;
+  gap: 0px;     
+  min-height: 500px; 
+  flex-direction: row-reverse;
+}
+.section-activity img.section-image {
+  display:flex;
+  
+  max-width: 700px;
+  max-height: 500px;
+  object-fit: cover;
+}
+.section-reverse {
+  flex-direction: row;
+  padding-left: -20px;
+}
+.section-text-panel {
+  background: #F2F2F0;
+  padding: 32px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+}
 }
 .page-container{display: flex;flex-direction: column;}
 
