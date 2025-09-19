@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Component Practice";
+import Button from "/workspaces/christiandw2/src/components/Button.astro";
+import Frame from "/workspaces/christiandw2/src/components/Frame.astro";
+import Card from "/workspaces/christiandw2/src/components/Card.astro";
+---
+
+<Layout title={pageTitle}>
+  <h1>Component Practice</h1>
+  <Frame title="hellooooooo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur veniam id dolor ut ratione, error voluptatibus! Odio facere accusamus tempore, ex error, eligendi similique beatae voluptates rerum unde libero.</Frame>
+  <Button title="Go Home "/>
+  <Card title="Title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam velit tempora nisi maxime quo inventore libero officiis, optio sit neque cum nostrum, expedita minima? Ad odio voluptas esse eveniet sapiente?Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus velit animi aliquam deleniti, itaque earum reprehenderit numquam, similique id beatae aut illum vel tempora sunt, veritatis praesentium optio labore? Debitis!</Card>
+
+</Layout>
+
+<style>
+  h1 {
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 10px;
+  }
+</style>
