@@ -6,20 +6,33 @@ export const pageTitle = "Project 01 Proposal";
 
 <Layout title={pageTitle}>
   <h1>Project 01 Proposal</h1>
+  <h3>Brainstormed Topics</h3>
   <ul>
   <li>Famous twink adoption center</li>
   <li>How to spot a twink</li>
   <li>Twink olympics?</li>
   <li>My dog’s fake weightloss journey</li>
   <li>Don't want to go into work? Find your look alike and hire them for the day</li>
-  <li>Things that would send a victorian child into a coma</li>
+  <li><strong>Things that would send a victorian child into a coma</strong></li>
 </ul>
-
-<Button title="Home"/>
+<div class="chosen-topic">
+  <h3><strong> Chosen Topic: </strong> Things that would send a victorian child into a coma</h3>
+<Button title="Content Doc" href="https://docs.google.com/document/d/1Zy32dGgTk3QniiXXyTZ1vVghfMSg3IPPUe4IJvCrLGo/edit?usp=sharing"/>
+</div>
 </Layout>
 
 <style>
   h1 {
     color: blue;
   }
+ .chosen-topic {
+  display: flex;
+    margin-top: 2rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: fit-content;
+    padding: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.409);
+  }
+
 </style>
