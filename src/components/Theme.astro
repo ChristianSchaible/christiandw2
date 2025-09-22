@@ -7,7 +7,7 @@ import "@fontsource-variable/dm-sans";
     --color-bg: #fdfdfd;
     --color-text: #000000;
     --color-primary: #1100ff;
-    --color-secondary: #0003bb;
+    --color-secondary: #000000;
     --color-ternary: #00a391;
     --color-focus: #ff00c8;
 
@@ -26,12 +26,13 @@ import "@fontsource-variable/dm-sans";
   }
   a {
     color: var(--color-primary);
-    text-decoration: underline var(--color-ternary) 1.5px;
+    text-decoration: none;
     text-underline-offset: 0.2em;
     position: relative;
     z-index: 1;
   }
   a:hover {
+    text-decoration: line-through;
   }
 
   h1,
@@ -56,6 +57,7 @@ import "@fontsource-variable/dm-sans";
   .text-frame > * {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    z
   }
   .btn {
     padding: 0.5rem;

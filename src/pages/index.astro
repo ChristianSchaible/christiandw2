@@ -4,9 +4,26 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-  <h1>Welcome!</h1>
-  <p>This is your Design for the Web 2 starter site.</p>
-  <p>
-    Feel free to start editing this page in <code>src/pages/index.astro</code>
-  </p>
+  <h1>Hey there!</h1>
+  <h3>Im <strong>Christian</strong>(not the religion tho - im an athiest)</h3>
   </Layout>
+
+<style>
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    gap: 0.5em;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  strong {
+    color: var(--color-primary);
+  }
