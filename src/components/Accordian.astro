@@ -1,0 +1,39 @@
+---
+const {title="Button"} = Astro.props
+---
+
+<div class="accordian" title="{title}">
+    <details>
+        <summary>{title}</summary>
+        <div class="content"><slot /></div>
+    </details>
+</div>
+
+<style> 
+.accordian {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 25px;
+    max-width: 40em;
+    margin: 1rem;
+
+summary {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+summary:hover {
+    background-color: white;
+    color: black;
+}
+.content {
+    margin-top: 20px;
+}
+}
+</style>

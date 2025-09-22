@@ -4,6 +4,7 @@ export const pageTitle = "Component Practice";
 import Button from "src/components/Button.astro";
 import Frame from "src/components/Frame.astro";
 import Card from "src/components/Card.astro";
+import Accordian from "src/components/Accordian.astro";
 ---
 
 <Layout title={pageTitle}>
@@ -11,7 +12,9 @@ import Card from "src/components/Card.astro";
   <Frame title="hellooooooo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur veniam id dolor ut ratione, error voluptatibus! Odio facere accusamus tempore, ex error, eligendi similique beatae voluptates rerum unde libero.</Frame>
   <Button title="Go Home "/>
   <Card title="Title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam velit tempora nisi maxime quo inventore libero officiis, optio sit neque cum nostrum, expedita minima? Ad odio voluptas esse eveniet sapiente?Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus velit animi aliquam deleniti, itaque earum reprehenderit numquam, similique id beatae aut illum vel tempora sunt, veritatis praesentium optio labore? Debitis!</Card>
-
+  <Accordian title="What is this?">
+    This is a summary component. It can be used to summarize content on a page. It is a block element that can contain other elements. It is styled with a border and padding. It can be used to summarize content on a page. It is a block element that can contain other elements. It is styled with a border and padding.
+  </Accordian>
 </Layout>
 
 <style>
