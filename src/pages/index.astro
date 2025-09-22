@@ -1,32 +1,48 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/CompactLayout.astro";
 
 ---
 
-<Layout title="Home" class="home">
+<Layout title="Home">
+  <div class="home">
   <h1>Hey there!</h1>
   <h2>Im <strong>Christian.</strong></h2>
   <h3>(not the religion though - i'm an athiest.)</h3>
+  <div style="display: flex; flex-direction: row;">
   <span class="dot1"></span>
   <span class="dot2"></span>
   <span class="dot3"></span>
+  </div>
+  </div>
+  
   </Layout>
 
 <style>
+  .home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: 0px;
+    padding: 50px;
+  }
 
   h1 {
-    font-size: 4rem;
+    font-size: 9vw;
     color: rgb(255, 255, 255);
     background-color: blue;
     width: fit-content;
     padding: 20px;
     border-radius: 25px;
     margin: 0px;
-    margin-top: 20px;
+    animation: forwards;
+
   }
   h2 {
     text-align: justify;
-    font-size: 4rem;
+    font-size: 9vw;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     border: 2px solid black;
@@ -38,9 +54,14 @@ import Layout from "../layouts/Layout.astro";
   strong {
     color: blue ;
     font-weight: 1000;
+    font-size: 10vw;
+  }
+  strong:hover {
+    text-decoration: line-through;
+    color:black;
   }
   h3 {
-    font-size: 2rem;
+    font-size: 4vw;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     border: 2px solid black;
@@ -53,7 +74,10 @@ import Layout from "../layouts/Layout.astro";
   height: 20vw;
   width: 20vw;
   border-radius: 50%;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+
 }
 .dot1 {
   background-color: blue;
@@ -65,5 +89,14 @@ import Layout from "../layouts/Layout.astro";
 .dot3 {
   background-color: rgb(0, 0, 0);
 }
-  
+.dot1:hover {
+   background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+}
+.dot2:hover {
+   background-color: rgb(0, 0, 0);
+}
+.dot3:hover {
+   background-color: blue;
+}
 </style>

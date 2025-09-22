@@ -34,20 +34,24 @@ import NavList from "../components/site/NavList.astro";
 <style>
   .compact-nav {
     position: fixed;
-    top: 2rem;
+    top: 1rem;
     right: 0;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     background-color: var(--color-bg);
-    border: 1px solid var(--color-primary);
+    border: 1px solid black;
     border-right: none;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
     Z-index: 1000000;
+  }
+  .compact-nav:hover {
+    background-color: black;
+    color: white;
   }
   details > summary {
     list-style: none;
