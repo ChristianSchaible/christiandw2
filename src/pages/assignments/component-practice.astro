@@ -5,6 +5,7 @@ import Button from "src/components/Button.astro";
 import Frame from "src/components/Frame.astro";
 import Card from "src/components/Card.astro";
 import Accordian from "src/components/Accordian.astro";
+import {Content as SampleContent} from "src/components/markdown/sample-content.md";
 ---
 
 <Layout title={pageTitle}>
@@ -15,6 +16,7 @@ import Accordian from "src/components/Accordian.astro";
   <Accordian title="What is this?">
     This is a summary component. It can be used to summarize content on a page. It is a block element that can contain other elements. It is styled with a border and padding. It can be used to summarize content on a page. It is a block element that can contain other elements. It is styled with a border and padding.
   </Accordian>
+  <SampleContent> </SampleContent>
 </Layout>
 
 <style>

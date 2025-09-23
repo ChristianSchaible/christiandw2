@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Button from "src/components/Button.astro";
 export const pageTitle = "Project 01 Proposal";
+import {Content as Projectcontent} from "src/components/markdown/p1content.md";
 ---
 
 <Layout title={pageTitle}>
@@ -19,9 +20,29 @@ export const pageTitle = "Project 01 Proposal";
   <h3><strong> Chosen Topic: </strong> Things that would send a victorian child into a coma</h3>
 <Button title="Content Doc" href="https://docs.google.com/document/d/1Zy32dGgTk3QniiXXyTZ1vVghfMSg3IPPUe4IJvCrLGo/edit?usp=sharing"/>
 </div>
+<div class="content">
+  <Projectcontent> </Projectcontent>
+</div>
+
 </Layout>
 
 <style>
+  .content {
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.409);
+    margin-top: 2rem;
+    margin-right: 20px;
+  }
   h1 {
     color: blue;
   }
