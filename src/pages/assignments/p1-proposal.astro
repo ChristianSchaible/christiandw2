@@ -7,7 +7,7 @@ import {Content as Projectcontent} from "src/components/markdown/p1content.md";
 
 <Layout title={pageTitle}>
   <h1>Project 01 Proposal</h1>
-  <h3>Brainstormed Topics</h3>
+  <h2>Brainstormed Topics:</h2>
   <ul>
   <li>Famous twink adoption center</li>
   <li>How to spot a twink</li>
@@ -20,10 +20,12 @@ import {Content as Projectcontent} from "src/components/markdown/p1content.md";
   <h3><strong> Chosen Topic: </strong> Things that would send a victorian child into a coma</h3>
 <Button title="Content Doc" href="https://docs.google.com/document/d/1Zy32dGgTk3QniiXXyTZ1vVghfMSg3IPPUe4IJvCrLGo/edit?usp=sharing"/>
 </div>
+<h2>Content Markdown:</h2>
 <div class="content">
   <Projectcontent> </Projectcontent>
 </div>
-
+<h2>Style Tiles:</h2> 
+<iframe src="https://embed.figma.com/design/duhqzF8fq31OTT6A1GZ0p5/Style-Tiles?node-id=0-1&embed-host=share" allowfullscreen></iframe>
 </Layout>
 
 <style>
@@ -46,6 +48,9 @@ import {Content as Projectcontent} from "src/components/markdown/p1content.md";
   h1 {
     color: blue;
   }
+  h2 {
+    text-decoration: underline;
+  }
  .chosen-topic {
   display: flex;
     margin-top: 2rem;
@@ -53,6 +58,15 @@ import {Content as Projectcontent} from "src/components/markdown/p1content.md";
     border-radius: 25px;
     width: fit-content;
     padding: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.409);
+  }
+  iframe {
+    width: 90%;
+    height: 600px;
+    border: black 5px solid;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    border-radius: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.409);
   }
 
