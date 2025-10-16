@@ -1,9 +1,11 @@
 ---
+import Button from "@components/Button.astro";
 const assignments: { url: string; pageTitle: string }[] = Object.values(
   import.meta.glob("/src/pages/assignments/*", {
     eager: true,
   })
 );
+
 ---
 
 <ul>
@@ -17,6 +19,7 @@ const assignments: { url: string; pageTitle: string }[] = Object.values(
     })
   }
 </ul>
+ <Button target="_blank" href="https://victorianchild.netlify.app/" title="Project 1" />
 <style>
   ul {
     list-style: none;
