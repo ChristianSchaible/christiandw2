@@ -1,0 +1,31 @@
+---
+const {type} = Astro.props
+let bgColor;
+let textColor;
+if (type === 'dark') {
+  bgColor = 'black';
+  textColor = 'white';
+} else if (type === 'light') {
+  bgColor = 'white';
+  textColor = 'black';
+} else if (type === 'blue') {
+  bgColor = 'blue';
+  textColor = 'white';
+} else if (type === 'red') {
+  bgColor = 'red';
+  textColor = 'white';
+}
+
+---
+
+<h1 class="banner" style={`background-color:${bgColor}; color:${textColor}`}>
+hey there! try changing my type to "dark", "light", "blue", or "red"! :)
+</h1>
+
+<style>
+  .banner {
+    width: fit-content;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 10px;
+  }

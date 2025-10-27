@@ -1,0 +1,123 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Javascript Assignment";
+
+let now = new Date();
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let seconds = now.getSeconds();
+let message;
+if (hours < 6) {
+  message = "Bro why are you awake so early?";
+} else if (hours < 9) {
+  message = "Good morning early bird!";
+} else if (hours < 18) {
+  message = "Good afternoon! Hope you're having a great day!";
+} else if (hours < 22) {
+  message = "Good night! Get some rest!";
+} else {
+  message = "GO TO BED!";
+}
+import Banner from "src/components/Banner.astro";
+---
+
+<Layout title={pageTitle}>
+ <h1>Javascript Assignment</h1>
+  <p>This is a sample assignment page for the Javascript assignment.</p>
+  <div class="clock">
+    <h1 class="time"> Current Time: {hours}:{minutes}:{seconds}</h1>
+    <p class="message">{message}</p>
+  </div>
+  <Banner type="red"/>
+  <button id="my-button">a cat goes whatttt?</button>
+  <button id="colorbutton">Click me to change colors</button>
+
+  <script>
+      let bgColor = 'white';
+      let textColor = 'black';
+      
+  const colorButton = document.querySelector('#colorbutton');
+
+  colorButton.style.backgroundColor = bgColor;
+  colorButton.style.color = textColor;
+
+      const changeColors = () => {
+        if (bgColor === 'black') {
+          textColor = 'black';
+          bgColor = 'white';
+        } else {
+          bgColor = 'black';
+          textColor = 'white';
+        }
+        colorButton.style.backgroundColor = bgColor;
+        colorButton.style.color = textColor;
+      };
+
+      colorButton.addEventListener('click', changeColors);
+  </script>
+
+</Layout>
+
+
+<style>
+  .clock {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30vw;
+    border: 2px solid blue;
+    padding: .5rem;
+    border-radius:.5rem ;
+    margin-top:1rem;
+  }
+  .time {
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin:0;
+    text-align: center;
+  }
+  .message {
+    font-size: 1.25rem;
+    color: blue;
+    font-weight: bold;
+    width: fit-content;
+    margin:0;
+    text-align: center;
+  }
+  #my-button {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.409);
+    margin: 10px;
+   
+    }
+
+  #my-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+</style>
+
+ <script>
+
+    const myFunction = () => {
+    alert("meowwwwwwwwwwwww");
+  };
+
+  const myButton = document.querySelector("#my-button");
+  if (myButton instanceof HTMLElement) myButton.addEventListener("click", myFunction);
+</script>
+
+  
