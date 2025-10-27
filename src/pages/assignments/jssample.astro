@@ -31,30 +31,8 @@ import Banner from "src/components/Banner.astro";
   <Banner type="red"/>
   <button id="my-button">a cat goes whatttt?</button>
   <button id="colorbutton">Click me to change colors</button>
+  <button id="sizebutton">Can you see me?</button>
 
-  <script>
-      let bgColor = 'white';
-      let textColor = 'black';
-      
-  const colorButton = document.querySelector('#colorbutton');
-
-  colorButton.style.backgroundColor = bgColor;
-  colorButton.style.color = textColor;
-
-      const changeColors = () => {
-        if (bgColor === 'black') {
-          textColor = 'black';
-          bgColor = 'white';
-        } else {
-          bgColor = 'black';
-          textColor = 'white';
-        }
-        colorButton.style.backgroundColor = bgColor;
-        colorButton.style.color = textColor;
-      };
-
-      colorButton.addEventListener('click', changeColors);
-  </script>
 
 </Layout>
 
@@ -120,4 +98,44 @@ import Banner from "src/components/Banner.astro";
   if (myButton instanceof HTMLElement) myButton.addEventListener("click", myFunction);
 </script>
 
-  
+    <script>
+      let bgColor = 'white';
+      let textColor = 'black';
+      
+  const colorButton = document.querySelector('#colorbutton');
+
+  colorButton.style.backgroundColor = bgColor;
+  colorButton.style.color = textColor;
+
+      const changeColors = () => {
+        if (bgColor === 'black') {
+          textColor = 'black';
+          bgColor = 'white';
+        } else {
+          bgColor = 'black';
+          textColor = 'white';
+        }
+        colorButton.style.backgroundColor = bgColor;
+        colorButton.style.color = textColor;
+      };
+
+      colorButton.addEventListener('click', changeColors);
+  </script>
+
+  <script>
+    const sizeButton = document.querySelector('#sizebutton');
+
+    const changeSize = () => {
+      sizeButton?.classList.toggle('large');
+    };
+    sizeButton.addEventListener('click', changeSize);
+  </script>
+
+  <style>
+    #sizebutton {
+      font-size: .5rem;
+    }
+    #sizebutton.large {
+      font-size: 3rem;
+    }
+  </style>
