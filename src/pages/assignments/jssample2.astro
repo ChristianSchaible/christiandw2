@@ -1,0 +1,94 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "JS Target Practice";
+---
+
+<Layout title={pageTitle}>
+<h1>Target Practice!</h1>
+  <p>Click the button to move it around the screen!
+<div class="TargetPractice">
+  <button id="target"></button>
+</div>
+  </p>
+</Layout>
+
+<style>
+  h1 {
+    color: blue;
+  }
+  .TargetPractice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  #target {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+  }
+  #target:hover {
+    cursor: pointer;
+    background-color: red;
+    transition: background-color 0.3s;
+  }
+  .top {
+    position: absolute;
+    top: 30px;
+    left: 30%;
+    transform: translateX(-30%);
+  }
+  .bottom {
+    position: absolute;
+    bottom: 90px;
+    left: 30%;
+    transform: translateX(-70%);
+  }
+  .left {
+    position: absolute;   
+    top: 80%;
+    left: 300px;
+    transform: translateY(-90%);
+  }
+  .right {
+    position: absolute;
+    top: 20%;
+    right: 100px;
+    transform: translateY(-90%);
+  } 
+
+</style>
+
+<script>
+  const button = document.querySelector('#target');
+
+  const targetPractice = function(){
+    if (button.classList.contains('top')){
+      button.classList.remove('top');
+      button.classList.add('right');
+      return;
+    }
+    if (button.classList.contains('right')){
+      button.classList.remove('right');
+      button.classList.add('bottom');
+      return;
+    }
+    if (button.classList.contains('bottom')){
+      button.classList.remove('bottom');
+      button.classList.add('left');
+      return;
+    }
+    if (button.classList.contains('left')){
+      button.classList.remove('left');
+      return;
+    } 
+    button.classList.add('top');
+    
+  }
+
+  button.addEventListener('click', targetPractice);
+
+</script>
+ 
