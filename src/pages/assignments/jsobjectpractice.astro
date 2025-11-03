@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Objects and Arrays Practice";
+import ProfileCard from "src/components/Profilecard.astro";
+
+const Christian = {
+  firstname: 'Christian',
+  lastname: 'Schaible',
+  hometown: 'Highland, New York',
+  age:22,
+  waist: "thin",
+};
+const Cat = {
+  firstname: 'Meow',
+  lastname: 'Meow',
+  hometown: 'Meowmeow, Meow Meow',
+  age:'meow',
+  waist: "chunk",
+};
+const colors = [
+  "Red",
+  "Blue", 
+  "Green",
+  "Yellow",
+  ];
+const streamingsites = [
+{ name: "Netflix",
+  site: "www.netflix.com",
+},
+{ name: "Hulu",
+  site: "www.hulu.com",
+},
+{ name: "Disney+",
+  site: "www.disneyplus.com",
+},
+];
+---
+<Layout title={pageTitle}>
+  <ProfileCard person={Christian}/>
+  <ProfileCard person={Cat}/>
+  <ul>
+    {colors.map (function(color) {
+      return <li>{color}</li> })}
+  </ul>
+  <div class="streaming-sites">
+    {streamingsites.map (function(streaming) {
+      return <a href={streaming.site}>{streaming.name}</a> })}
+  </div>
+  
+</Layout>
+
+<style>
+  h1 {
+    color: blue;
+  }
+  li {
+    color: blue;
+  }
+  .streaming-sites {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    color: blue;
+  }
+  .streaming-sites a {
+    text-decoration: none;
+    font-weight: bold;
+    border : 2px solid blue;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .streaming-sites a:hover {
+    background-color: blue;
+    color: white;
+  }
+</style>

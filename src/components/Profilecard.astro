@@ -1,0 +1,21 @@
+---
+const {person} = Astro.props;
+---
+<article class="profile-card">
+  <h2>Meet {person.firstname} {person.lastname}</h2>
+  <p>{person.age} years old from {person.hometown}</p>
+  <p>Waist: {person.waist}</p>
+</article>
+
+<style>
+    .profile-card {
+        background-color: black;
+        color:white;
+        width: fit-content;
+        padding: .5rem;
+        padding-top:.2rem;
+        margin-top:.5rem;
+        border-radius: 5px;
+        }
+    }
+</style>
