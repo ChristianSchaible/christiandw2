@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Color Theme";
+---
+
+<Layout title={pageTitle}>
+  <h1>Color Theme Practice!</h1>
+  <p>Click the buttons below to switch between light and dark mode.</p>
+  <button id="btndark">Dark Mode</button>
+  <button id="btnlight">Light Mode</button>
+</Layout>
+
+<script>
+  const btmdark = document.querySelector('#btndark');
+
+  const setDark = () => {
+    document.documentElement.style.colorScheme= "dark";
+  }
+
+  btmdark?.addEventListener('click', setDark);
+
+ const btmlight = document.querySelector('#btnlight');
+
+  const setLight = () => {
+    document.documentElement.style.colorScheme= "light";
+  }
+
+  btmlight?.addEventListener('click', setLight);
+</script>
+
+<style is:global>
+  :root {
+    --theme-light-fg: rgb(213, 50, 50);
+    --theme-light-bg: rgb(255, 253, 253);
+    --theme-light-accent: rgb(255, 79, 79);
+    --theme-light-accent2: rgb(255, 166, 166);
+    --theme-light-accent3: rgb(0, 0, 0);
+
+    --theme-dark-fg: rgb(255, 255, 255);
+    --theme-dark-bg: rgb(11, 11, 11);
+    --theme-dark-accent: rgb(253, 42, 42);
+    --theme-dark-accent2: rgb(255, 111, 111);
+    --theme-dark-accent3: rgb(255, 207, 207);
+
+    color-scheme: light dark;
+
+    --color-fg: light-dark(var(--theme-light-fg), var(--theme-dark-fg));
+    --color-bg: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+    --color-accent: light-dark(var(--theme-light-accent), var(--theme-dark-accent));
+    --color-accent2: light-dark(var(--theme-light-accent2), var(--theme-dark-accent2));
+    --color-accent3: light-dark(var(--theme-light-accent3), var(--theme-dark-accent3));
+
+  }
+</style>
+
+<style>
+  body{
+    background-color: var(--color-bg);
+  }
+  * {
+    color: var(--color-fg);
+  }
+  h1 {
+    COLOR: var(--color-accent)
+  }
+  button {
+    background-color: var(--color-accent2);
+    color: var(--color-accent3);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 8px;
+    font-size: 10rem;
+    cursor: pointer;
+    width: 75vw;
+  }
+  button:hover {
+    background-color: var(--color-accent3);
+    color: var(--color-accent2);
+</style>
