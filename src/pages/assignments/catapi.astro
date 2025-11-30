@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "API Practice";
+
+const data = await fetch("https://api.thecatapi.com/v1/breeds");
+const cats = await data.json();
+const selectedcats = cats.slice(0, 24);
+import Catcard from "../../components/Catcard.astro";
+---
+
+<Layout title={pageTitle}>
+  <h1>API Practice</h1>
+<div class="catgrid">
+  {selectedcats.map(function(catData)
+  {return <Catcard data={catData} />})}
+</div>
+</Layout>
+
+<style>
+  h1 {
+    color: blue;
+  }
+  .catgrid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  }
+</style>

@@ -4,33 +4,33 @@ export const pageTitle = "Color Theme";
 ---
 
 <Layout title={pageTitle}>
-  <h1>Color Theme Practice!</h1>
+  <h1>Color Theme Practice!*Removed due to messing up rest of site</h1>
   <p>Click the buttons below to switch between light and dark mode.</p>
   <button id="btndark">Dark Mode</button>
   <button id="btnlight">Light Mode</button>
 </Layout>
 
 <script>
-  const btmdark = document.querySelector('#btndark');
+//   const btmdark = document.querySelector('#btndark');
 
-  const setDark = () => {
-    document.documentElement.style.colorScheme= "dark";
-  }
+//   const setDark = () => {
+//     document.documentElement.style.colorScheme= "dark";
+//   }
 
-  btmdark?.addEventListener('click', setDark);
+//   btmdark?.addEventListener('click', setDark);
 
- const btmlight = document.querySelector('#btnlight');
+//  const btmlight = document.querySelector('#btnlight');
 
-  const setLight = () => {
-    document.documentElement.style.colorScheme= "light";
-  }
+//   const setLight = () => {
+//     document.documentElement.style.colorScheme= "light";
+//   }
 
-  btmlight?.addEventListener('click', setLight);
+//   btmlight?.addEventListener('click', setLight);
 </script>
 
 <style is:global>
   :root {
-    --theme-light-fg: rgb(213, 50, 50);
+    /* --theme-light-fg: rgb(213, 50, 50);
     --theme-light-bg: rgb(255, 253, 253);
     --theme-light-accent: rgb(255, 79, 79);
     --theme-light-accent2: rgb(255, 166, 166);
@@ -48,7 +48,7 @@ export const pageTitle = "Color Theme";
     --color-bg: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
     --color-accent: light-dark(var(--theme-light-accent), var(--theme-dark-accent));
     --color-accent2: light-dark(var(--theme-light-accent2), var(--theme-dark-accent2));
-    --color-accent3: light-dark(var(--theme-light-accent3), var(--theme-dark-accent3));
+    --color-accent3: light-dark(var(--theme-light-accent3), var(--theme-dark-accent3)); */
 
   }
 </style>

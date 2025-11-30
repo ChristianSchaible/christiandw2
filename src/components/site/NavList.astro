@@ -1,5 +1,6 @@
 ---
 import Button from "@components/Button.astro";
+
 const assignments: { url: string; pageTitle: string }[] = Object.values(
   import.meta.glob("/src/pages/assignments/*", {
     eager: true,
@@ -17,13 +18,15 @@ const assignments: { url: string; pageTitle: string }[] = Object.values(
         </li>
       );
     })
-  }
+  } 
+  <a class="final" href="https://victorianchild.netlify.app">Project 1 - Victorian Child </a>
+ <a class="final" href="https://christianschaiblelinks.netlify.app">Project 2 - Linktree </a>
 </ul>
- <Button target="_blank" href="https://victorianchild.netlify.app/" title="Project 1" />
+
 <style>
   ul {
     list-style: none;
-    padding: 0;
+    padding: 0
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -33,4 +36,11 @@ const assignments: { url: string; pageTitle: string }[] = Object.values(
   li {
     margin: 0;
   }
+  a.final {
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-radius: .5rem;
+  }
+  
 </style>
